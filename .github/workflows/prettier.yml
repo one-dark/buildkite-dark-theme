@@ -8,4 +8,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: creyD/prettier_action@v3.1
         with:
-          prettier_options: --check .s
+          prettier_options: --check .
