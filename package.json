@@ -1,0 +1,20 @@
+{
+  "name": "buildkite-dark-theme",
+  "version": "1.0.0",
+  "description": "Relief the stress on your eyes when using Buildkite with this custom dark theme! This theme is inspired by GitHub dark theme.",
+  "repository": "github:one-dark/buildkite-dark-theme",
+  "author": "Mark Skelton",
+  "license": "ISC",
+  "keywords": [
+    "buildkite",
+    "dark",
+    "theme"
+  ],
+  "scripts": {
+    "check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
