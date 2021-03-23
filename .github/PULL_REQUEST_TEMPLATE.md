@@ -1,0 +1,2 @@
+- [ ] I've updated the `@version` at the top of `theme.user.css`.
+- [ ] I've formatted `theme.user.css` with [Prettier](https://prettier.io).
