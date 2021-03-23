@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Buildkite Dark Theme
 @namespace      github.com/one-dark
-@version        2.3.2
+@version        2.4.0
 @description    Relief the stress on your eyes when using Buildkite with this custom dark theme! This theme is inspired by the GitHub dark theme that was recently released.
 @author         Mark Skelton
 @license        ISC
@@ -477,5 +477,31 @@
 
   .hover-bg-build-failed-dark:hover {
     background-color: rgb(var(--color-alert-error) / 70%);
+  }
+  
+  /** Pagination */
+  .pagination li a,
+  .pagination li.disabled a,
+  .pagination li a:hover,
+  .pagination li.disabled a:hover {
+      border-color: var(--color-border-primary);
+  }
+    
+  .pagination li a {
+      background-color: var(--color-bg-primary);   
+  }
+    
+  .pagination li.disabled a {
+      background-color: var(--color-bg-secondary);
+  }
+
+  .pagination li a:hover,
+  .pagination li.disabled a:hover,
+  .pagination li a:focus {
+      background-color: var(--color-bg-tertiary);
+  }
+
+  .pagination li a:focus {
+      border-color: var(--color-state-focus-border);
   }
 }
