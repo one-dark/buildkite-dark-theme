@@ -211,6 +211,10 @@
     border-color: var(--color-border-primary);
   }
 
+  .build-panel .panel-heading + div:not(.panel-footer) {
+    border-color: var(--color-border-primary);
+  }
+
   .build-panel.panel-success {
     border-color: var(--color-status-passed-border);
   }
