@@ -201,57 +201,57 @@
   }
 
   /* Pipeline detail header */
-  .panel-footer {
+  .build-page-refresh-off .panel-footer {
     background-color: var(--color-bg-tertiary);
     border-color: var(--color-border-primary);
   }
 
-  .panel-footer .btn-danger,
-  .panel-footer .btn-default {
+  .build-page-refresh-off .panel-footer .btn-danger,
+  .build-page-refresh-off .panel-footer .btn-default {
     border-color: var(--color-border-primary);
   }
 
-  .build-panel .panel-heading + div:not(.panel-footer) {
+  .build-page-refresh-off .build-panel .panel-heading + div:not(.panel-footer) {
     border-color: var(--color-border-primary);
   }
 
-  .build-panel.panel-success {
+  .build-page-refresh-off .build-panel.panel-success {
     border-color: var(--color-status-passed-border);
   }
 
-  .panel-default > .panel-heading {
+  .build-page-refresh-off .panel-default > .panel-heading {
     background-color: var(--color-bg-tertiary);
     color: var(--color-text-primary);
     border-color: var(--color-border-primary);
   }
 
-  .build-panel.panel-success .panel-heading,
-  .build-pipeline-job.build-pipeline-state-finished,
-  .build-pipeline-job.build-pipeline-state-passed {
+  .build-page-refresh-off .build-panel.panel-success .panel-heading,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-finished,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-passed {
     background: var(--color-status-passed-bg);
     border-color: var(--color-status-passed-border-light);
     color: var(--color-status-passed-text);
   }
 
-  .panel-warning {
+  .build-page-refresh-off .panel-warning {
     border-color: var(--color-status-warn-border);
   }
 
-  .panel-warning .panel-heading,
-  .build-pipeline-job.build-pipeline-state-running {
+  .build-page-refresh-off .panel-warning .panel-heading,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-running {
     background-color: var(--color-status-warn-bg);
     border-color: var(--color-status-warn-border-light);
     color: var(--color-status-warn-text);
   }
 
-  .build-panel.panel-danger {
+  .build-page-refresh-off .build-panel.panel-danger {
     border-color: var(--color-status-failed-border);
   }
 
-  .panel-danger .panel-heading,
-  .build-pipeline-job.build-pipeline-state-failed,
-  .build-pipeline-job.build-pipeline-state-failed-soft,
-  .build-pipeline-job.build-pipeline-state-waiting_failed {
+  .build-page-refresh-off .panel-danger .panel-heading,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-failed,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-failed-soft,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-waiting_failed {
     background: var(--color-status-failed-bg);
     border-color: var(--color-status-failed-border-light);
     color: var(--color-status-failed-text);
@@ -272,33 +272,33 @@
   }
 
   /* Pipeline detail steps */
-  .job-list-pipeline
+  .build-page-refresh-off .job-list-pipeline
     .build-details-pipeline-job
     .build-details-pipeline-job-body__controls {
     box-shadow: 0 10px var(--color-bg-primary);
   }
 
-  .job-list-pipeline .build-details-pipeline-job,
-  .job-list-pipeline .build-details-pipeline-job-body {
+  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job,
+  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-body {
     border-color: var(--color-border-primary);
   }
 
-  .job-list-pipeline .build-details-pipeline-job-state-running,
-  .job-list-pipeline
+  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-state-running,
+  .build-page-refresh-off .job-list-pipeline
     .build-details-pipeline-job-state-running
     .build-details-pipeline-job-body {
     border-color: var(--color-status-warn-border);
   }
 
-  .job-list-pipeline .build-details-pipeline-job-state-passed,
-  .job-list-pipeline
+  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-state-passed,
+  .build-page-refresh-off .job-list-pipeline
     .build-details-pipeline-job-state-passed
     .build-details-pipeline-job-body {
     border-color: var(--color-status-passed-border);
   }
 
-  .job-list-pipeline .build-details-pipeline-job-state-failed,
-  .job-list-pipeline
+  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-state-failed,
+  .build-page-refresh-off .job-list-pipeline
     .build-details-pipeline-job-state-failed
     .build-details-pipeline-job-body {
     border-color: var(--color-status-failed-border);
