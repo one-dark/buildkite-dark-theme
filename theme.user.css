@@ -257,16 +257,17 @@
     color: var(--color-status-failed-text);
   }
 
-  .build-pipeline-job,
-  .build-pipeline-job.build-pipeline-state-assigned,
-  .build-pipeline-job.build-pipeline-state-blocked,
-  .build-pipeline-job.build-pipeline-state-broken {
+  .build-page-refresh-off .build-pipeline-job,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-accepted,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-assigned,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-blocked,
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-broken {
     background-color: var(--color-bg-overlay);
     color: var(--color-text-secondary);
     border-color: var(--color-border-primary);
   }
 
-  .build-pipeline-job.build-pipeline-job-waiter {
+  .build-page-refresh-off .build-pipeline-job.build-pipeline-job-waiter {
     background: none;
     border: none;
   }
