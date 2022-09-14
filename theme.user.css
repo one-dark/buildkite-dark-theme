@@ -201,30 +201,39 @@
   }
 
   /* Pipeline detail header */
+  .build-page-refresh-on .panel-footer,
   .build-page-refresh-off .panel-footer {
     background-color: var(--color-bg-tertiary);
     border-color: var(--color-border-primary);
   }
 
+  .build-page-refresh-on .panel-footer .btn-danger,
+  .build-page-refresh-on .panel-footer .btn-default,
   .build-page-refresh-off .panel-footer .btn-danger,
   .build-page-refresh-off .panel-footer .btn-default {
     border-color: var(--color-border-primary);
   }
 
+  .build-page-refresh-on .build-panel .panel-heading + div:not(.panel-footer),
   .build-page-refresh-off .build-panel .panel-heading + div:not(.panel-footer) {
     border-color: var(--color-border-primary);
   }
 
+  .build-page-refresh-on .build-panel.panel-success,
   .build-page-refresh-off .build-panel.panel-success {
     border-color: var(--color-status-passed-border);
   }
 
+  .build-page-refresh-on .panel-default > .panel-heading,
   .build-page-refresh-off .panel-default > .panel-heading {
     background-color: var(--color-bg-tertiary);
     color: var(--color-text-primary);
     border-color: var(--color-border-primary);
   }
 
+  .build-page-refresh-on .build-panel.panel-success .panel-heading,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-finished,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-passed,
   .build-page-refresh-off .build-panel.panel-success .panel-heading,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-state-finished,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-state-passed {
@@ -233,10 +242,13 @@
     color: var(--color-status-passed-text);
   }
 
+  .build-page-refresh-on .panel-warning,
   .build-page-refresh-off .panel-warning {
     border-color: var(--color-status-warn-border);
   }
 
+  .build-page-refresh-on .panel-warning .panel-heading,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-running,
   .build-page-refresh-off .panel-warning .panel-heading,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-state-running {
     background-color: var(--color-status-warn-bg);
@@ -244,19 +256,37 @@
     color: var(--color-status-warn-text);
   }
 
+  .build-page-refresh-on .build-panel.panel-danger,
   .build-page-refresh-off .build-panel.panel-danger {
     border-color: var(--color-status-failed-border);
   }
 
+  .build-page-refresh-on .panel-danger .panel-heading,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-failed,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-failed-soft,
+  .build-page-refresh-on
+    .build-pipeline-job.build-pipeline-state-waiting_failed,
   .build-page-refresh-off .panel-danger .panel-heading,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-state-failed,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-state-failed-soft,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-waiting_failed {
+  .build-page-refresh-off
+    .build-pipeline-job.build-pipeline-state-waiting_failed {
     background: var(--color-status-failed-bg);
     border-color: var(--color-status-failed-border-light);
     color: var(--color-status-failed-text);
   }
 
+  .build-page-refresh-on
+    .build-pipeline-job.build-pipeline-state-failed
+    .build-pipeline-job__icon {
+    color: var(--color-status-failed-text);
+  }
+
+  .build-page-refresh-on .build-pipeline-job,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-accepted,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-assigned,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-blocked,
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-broken,
   .build-page-refresh-off .build-pipeline-job,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-state-accepted,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-state-assigned,
@@ -267,39 +297,77 @@
     border-color: var(--color-border-primary);
   }
 
+  .build-page-refresh-on .build-pipeline-job.build-pipeline-job-waiter,
   .build-page-refresh-off .build-pipeline-job.build-pipeline-job-waiter {
     background: none;
     border: none;
   }
 
   /* Pipeline detail steps */
-  .build-page-refresh-off .job-list-pipeline
+  .build-page-refresh-on
+    .job-list-pipeline
+    .build-details-pipeline-job
+    .build-details-pipeline-job-body__controls,
+  .build-page-refresh-off
+    .job-list-pipeline
     .build-details-pipeline-job
     .build-details-pipeline-job-body__controls {
     box-shadow: 0 10px var(--color-bg-primary);
   }
 
+  .build-page-refresh-on .job-list-pipeline .build-details-pipeline-job,
+  .build-page-refresh-on .job-list-pipeline .build-details-pipeline-job-body,
   .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job,
   .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-body {
     border-color: var(--color-border-primary);
   }
 
-  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-state-running,
-  .build-page-refresh-off .job-list-pipeline
+  .build-page-refresh-on
+    .job-list-pipeline
+    .build-details-pipeline-job-state-running,
+  .build-page-refresh-on
+    .job-list-pipeline
+    .build-details-pipeline-job-state-running
+    .build-details-pipeline-job-body,
+  .build-page-refresh-off
+    .job-list-pipeline
+    .build-details-pipeline-job-state-running,
+  .build-page-refresh-off
+    .job-list-pipeline
     .build-details-pipeline-job-state-running
     .build-details-pipeline-job-body {
     border-color: var(--color-status-warn-border);
   }
 
-  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-state-passed,
-  .build-page-refresh-off .job-list-pipeline
+  .build-page-refresh-on
+    .job-list-pipeline
+    .build-details-pipeline-job-state-passed,
+  .build-page-refresh-on
+    .job-list-pipeline
+    .build-details-pipeline-job-state-passed
+    .build-details-pipeline-job-body,
+  .build-page-refresh-off
+    .job-list-pipeline
+    .build-details-pipeline-job-state-passed,
+  .build-page-refresh-off
+    .job-list-pipeline
     .build-details-pipeline-job-state-passed
     .build-details-pipeline-job-body {
     border-color: var(--color-status-passed-border);
   }
 
-  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-state-failed,
-  .build-page-refresh-off .job-list-pipeline
+  .build-page-refresh-on
+    .job-list-pipeline
+    .build-details-pipeline-job-state-failed,
+  .build-page-refresh-on
+    .job-list-pipeline
+    .build-details-pipeline-job-state-failed
+    .build-details-pipeline-job-body,
+  .build-page-refresh-off
+    .job-list-pipeline
+    .build-details-pipeline-job-state-failed,
+  .build-page-refresh-off
+    .job-list-pipeline
     .build-details-pipeline-job-state-failed
     .build-details-pipeline-job-body {
     border-color: var(--color-status-failed-border);
@@ -508,5 +576,28 @@
 
   .pagination li a:focus {
     border-color: var(--color-state-focus-border);
+  }
+
+  .build-page-refresh-on .build-panel,
+  .build-page-refresh-on .build-duration,
+  .build-page-refresh-on .build-panel .panel-title,
+  .build-page-refresh-on .build-rebuild-button > span {
+    color: inherit;
+  }
+
+  .build-page-refresh-on
+    .build-pipeline-job.build-pipeline-state-failed
+    .build-pipeline-job-content:not(:first-child) {
+    background-color: inherit;
+  }
+  .build-page-refresh-on .build-header a:focus-visible,
+  .build-page-refresh-on .build-header button:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-bg-primary),
+      0 0 0 4px var(--color-status-passed-text);
+  }
+
+  .build-page-refresh-on .build-annotation .annotation-link,
+  .build-page-refresh-on .build-panel .build-pipeline-job .tabular-numerals {
+    background: var(--color-bg-primary);
   }
 }
