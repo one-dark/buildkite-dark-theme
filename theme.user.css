@@ -1,603 +1,157 @@
 /* ==UserStyle==
 @name           Buildkite Dark Theme
 @namespace      github.com/one-dark
-@version        2.4.3
+@version        3.0.0
 @description    Relief the stress on your eyes when using Buildkite with this custom dark theme! This theme is inspired by the GitHub dark theme that was recently released.
 @author         Mark Skelton
 @license        ISC
 @homepageURL    https://github.com/one-dark/buildkite-dark-theme
 ==/UserStyle== */
-@-moz-document regexp("https://buildkite\\.com/(?!docs).*")
-{
-  :root {
-    --color-text-primary: #c9d1d9;
-    --color-text-secondary: #8b949e;
-    --color-text-placeholder: #484f58;
-    --color-bg-primary: #06090f;
-    --color-bg-secondary: #0d1117;
-    --color-bg-tertiary: #161b22;
-    --color-bg-overlay: #21262d;
-    --color-border-primary: #30363d;
-    --color-border-secondary: #21262d;
-    --color-state-focus-border: #388bfd;
-    --color-state-focus-shadow: 0 0 0 3px #0c2d6b;
-    --color-select-menu-backdrop-border: #484f58;
-    --color-shadow-large: 0 8px 24px #010409;
-    --color-code-selection-bg: rgb(121 192 255 / 30%);
-    /* Annotation colors */
-    --color-alert-info: 56 139 253;
-    --color-alert-success: 46 160 67;
-    --color-alert-warn: 187 128 9;
-    --color-alert-error: 248 81 73;
-    /* Status colors */
-    --color-status-passed-bg: rgba(63, 185, 80, 0.1);
-    --color-status-passed-border: rgba(63, 185, 80, 0.4);
-    --color-status-passed-border-light: rgb(63 185 80 / 12%);
-    --color-status-passed-text: #3fb950;
-    --color-status-failed-bg: rgba(185, 63, 63, 0.1);
-    --color-status-failed-border: rgba(185, 63, 63, 0.4);
-    --color-status-failed-border-light: rgb(185 63 63 / 12%);
-    --color-status-failed-text: #ff6b61;
-    --color-status-warn-bg: rgba(255, 197, 0, 0.1);
-    --color-status-warn-border: rgb(242 211 91 / 40%);
-    --color-status-warn-border-light: rgb(242 211 91 / 12%);
-    --color-status-warn-text: #ffd33d;
-  }
+@-moz-document regexp("https://buildkite\\.com/(?!docs).*") {
+    :root {
+        --color-text-primary: #c9d1d9;
+        --color-text-secondary: #8b949e;
+        --color-text-placeholder: #484f58;
+        --color-bg-primary: #06090f;
+        --color-bg-secondary: #0d1117;
+        --color-bg-tertiary: #161b22;
+        --color-bg-overlay: #21262d;
+        --color-border-primary: #30363d;
+        --color-border-secondary: #21262d;
+        --color-state-focus-border: #388bfd;
+        --color-state-focus-shadow: 0 0 0 3px #0c2d6b;
+        --color-select-menu-backdrop-border: #484f58;
+        --color-shadow-large: 0 8px 24px #010409;
+        --color-code-selection-bg: rgb(121 192 255 / 30%);
+        /* Annotation colors */
+        --color-alert-info: 56 139 253;
+        --color-alert-success: 46 160 67;
+        --color-alert-warn: 187 128 9;
+        --color-alert-error: 248 81 73;
+        /* Status colors */
+        --color-status-passed-bg: rgba(63, 185, 80, 0.1);
+        --color-status-passed-border: rgba(63, 185, 80, 0.4);
+        --color-status-passed-border-light: rgb(63 185 80 / 12%);
+        --color-status-passed-text: #3fb950;
+        --color-status-failed-bg: rgba(185, 63, 63, 0.1);
+        --color-status-failed-border: rgba(185, 63, 63, 0.4);
+        --color-status-failed-border-light: rgb(185 63 63 / 12%);
+        --color-status-failed-text: #ff6b61;
+        --color-status-warn-bg: rgba(255, 197, 0, 0.1);
+        --color-status-warn-border: rgb(242 211 91 / 40%);
+        --color-status-warn-border-light: rgb(242 211 91 / 12%);
+        --color-status-warn-text: #ffd33d;
 
-  body {
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
-  }
 
-  /** Colors */
-  .dark-gray,
-  .very-dark-gray,
-  .panel-footer .dark-gray,
-  .step-preview-type-script {
-    color: var(--color-text-secondary);
-  }
-
-  .black {
-    color: var(--color-text-primary);
-  }
-
-  .hover-black {
-    color: var(--color-text-secondary);
-  }
-
-  .hover-black:hover {
-    color: var(--color-text-primary);
-  }
-
-  /** Borders */
-  .border-mid-gray,
-  .border-white,
-  .border-gray,
-  .border-bottom-child-gray > * {
-    border-color: var(--color-border-primary);
-  }
-
-  /** Backgrounds */
-  .bg-gray,
-  .bg-dark-gray {
-    background-color: var(--color-border-primary);
-    color: var(--color-text-secondary);
-  }
-
-  .bg-white {
-    background-color: var(--color-bg-secondary);
-  }
-
-  .bg-silver {
-    background-color: var(--color-bg-tertiary);
-  }
-
-  .hover-bg-silver:hover,
-  .hover-bg-silver:focus {
-    background-color: var(--color-bg-tertiary);
-  }
-
-  /** Buttons */
-  .btn-default {
-    background-color: var(--color-bg-primary);
-    border-color: var(--color-border-primary);
-    color: var(--color-text-primary) !important;
-  }
-
-  .btn-default.btn--hovered,
-  .btn-default:hover,
-  .btn-danger:hover {
-    background-color: var(--color-bg-tertiary);
-    box-shadow: none;
-  }
-
-  .btn-danger {
-    background-color: var(--color-bg-primary);
-    border-color: var(--color-border-primary);
-  }
-
-  /** Forms */
-  .FormField__Label {
-    color: var(--color-text-primary);
-  }
-
-  .input,
-  .ais-SearchBox-input {
-    background-color: var(--color-bg-primary) !important;
-    border-color: var(--color-border-primary) !important;
-    color: var(--color-text-primary) !important;
-  }
-
-  .input:focus,
-  .ais-SearchBox-input:focus {
-    border: 1px solid var(--color-state-focus-border) !important;
-    box-shadow: var(--color-state-focus-shadow) !important;
-    outline: none !important;
-  }
-
-  .input::placeholder,
-  .ais-SearchBox-input:focus {
-    color: var(--color-text-placeholder);
-  }
-
-  .select,
-  select.form-control {
-    background-color: var(--color-bg-primary);
-    border-color: var(--color-border-primary);
-    color: var(--color-text-primary) !important;
-  }
-
-  /** Login */
-  .LoginSignup__hints {
-    border-top: none;
-  }
-
-  /** Code */
-  .annotation-body code,
-  .annotation-body pre {
-    background-color: var(--color-bg-tertiary);
-    border-color: var(--color-border-primary);
-    color: var(--color-text-primary);
-  }
-
-  pre.code {
-    background-color: var(--color-bg-tertiary);
-    border-color: var(--color-border-primary);
-    color: var(--color-text-primary);
-  }
-
-  code.code {
-    border-color: var(--color-border-primary);
-    color: var(--color-text-secondary);
-  }
-
-  /* Dashboard */
-  [data-testid="pipeline"] {
-    background-color: var(--color-bg-secondary);
-  }
-
-  /* Pipeline dashboard */
-  .panel {
-    background-color: var(--color-bg-primary);
-  }
-
-  .panel-default {
-    border-color: var(--color-border-primary);
-  }
-
-  .kinda-new-panel .panel-heading,
-  .better-branch-panel .panel-heading {
-    background-color: var(--color-bg-tertiary) !important;
-    border-color: var(--color-border-primary) !important;
-    color: var(--color-text-primary) !important;
-  }
-
-  .build-row {
-    border-color: var(--color-border-primary);
-  }
-
-  .better-branch-panel .build-row:hover {
-    background-color: var(--color-bg-tertiary);
-  }
-
-  /* Pipeline detail header */
-  .build-page-refresh-on .panel-footer,
-  .build-page-refresh-off .panel-footer {
-    background-color: var(--color-bg-tertiary);
-    border-color: var(--color-border-primary);
-  }
-
-  .build-page-refresh-on .panel-footer .btn-danger,
-  .build-page-refresh-on .panel-footer .btn-default,
-  .build-page-refresh-off .panel-footer .btn-danger,
-  .build-page-refresh-off .panel-footer .btn-default {
-    border-color: var(--color-border-primary);
-  }
-
-  .build-page-refresh-on .build-panel .panel-heading + div:not(.panel-footer),
-  .build-page-refresh-off .build-panel .panel-heading + div:not(.panel-footer) {
-    border-color: var(--color-border-primary);
-  }
-
-  .build-page-refresh-on .build-panel.panel-success,
-  .build-page-refresh-off .build-panel.panel-success {
-    border-color: var(--color-status-passed-border);
-  }
-
-  .build-page-refresh-on .panel-default > .panel-heading,
-  .build-page-refresh-off .panel-default > .panel-heading {
-    background-color: var(--color-bg-tertiary);
-    color: var(--color-text-primary);
-    border-color: var(--color-border-primary);
-  }
-
-  .build-page-refresh-on .build-panel.panel-success .panel-heading,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-finished,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-passed,
-  .build-page-refresh-off .build-panel.panel-success .panel-heading,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-finished,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-passed {
-    background: var(--color-status-passed-bg);
-    border-color: var(--color-status-passed-border-light);
-    color: var(--color-status-passed-text);
-  }
-
-  .build-page-refresh-on .panel-warning,
-  .build-page-refresh-off .panel-warning {
-    border-color: var(--color-status-warn-border);
-  }
-
-  .build-page-refresh-on .panel-warning .panel-heading,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-running,
-  .build-page-refresh-off .panel-warning .panel-heading,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-running {
-    background-color: var(--color-status-warn-bg);
-    border-color: var(--color-status-warn-border-light);
-    color: var(--color-status-warn-text);
-  }
-
-  .build-page-refresh-on .build-panel.panel-danger,
-  .build-page-refresh-off .build-panel.panel-danger {
-    border-color: var(--color-status-failed-border);
-  }
-
-  .build-page-refresh-on .panel-danger .panel-heading,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-failed,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-failed-soft,
-  .build-page-refresh-on
-    .build-pipeline-job.build-pipeline-state-waiting_failed,
-  .build-page-refresh-off .panel-danger .panel-heading,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-failed,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-failed-soft,
-  .build-page-refresh-off
-    .build-pipeline-job.build-pipeline-state-waiting_failed {
-    background: var(--color-status-failed-bg);
-    border-color: var(--color-status-failed-border-light);
-    color: var(--color-status-failed-text);
-  }
-
-  .build-page-refresh-on
-    .build-pipeline-job.build-pipeline-state-failed
-    .build-pipeline-job__icon {
-    color: var(--color-status-failed-text);
-  }
-
-  .build-page-refresh-on .build-pipeline-job,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-accepted,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-assigned,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-blocked,
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-state-broken,
-  .build-page-refresh-off .build-pipeline-job,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-accepted,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-assigned,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-blocked,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-state-broken {
-    background-color: var(--color-bg-overlay);
-    color: var(--color-text-secondary);
-    border-color: var(--color-border-primary);
-  }
-
-  .build-page-refresh-on .build-pipeline-job.build-pipeline-job-waiter,
-  .build-page-refresh-off .build-pipeline-job.build-pipeline-job-waiter {
-    background: none;
-    border: none;
-  }
-
-  /* Pipeline detail steps */
-  .build-page-refresh-on
-    .job-list-pipeline
-    .build-details-pipeline-job
-    .build-details-pipeline-job-body__controls,
-  .build-page-refresh-off
-    .job-list-pipeline
-    .build-details-pipeline-job
-    .build-details-pipeline-job-body__controls {
-    box-shadow: 0 10px var(--color-bg-primary);
-  }
-
-  .build-page-refresh-on .job-list-pipeline .build-details-pipeline-job,
-  .build-page-refresh-on .job-list-pipeline .build-details-pipeline-job-body,
-  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job,
-  .build-page-refresh-off .job-list-pipeline .build-details-pipeline-job-body {
-    border-color: var(--color-border-primary);
-  }
-
-  .build-page-refresh-on
-    .job-list-pipeline
-    .build-details-pipeline-job-state-running,
-  .build-page-refresh-on
-    .job-list-pipeline
-    .build-details-pipeline-job-state-running
-    .build-details-pipeline-job-body,
-  .build-page-refresh-off
-    .job-list-pipeline
-    .build-details-pipeline-job-state-running,
-  .build-page-refresh-off
-    .job-list-pipeline
-    .build-details-pipeline-job-state-running
-    .build-details-pipeline-job-body {
-    border-color: var(--color-status-warn-border);
-  }
-
-  .build-page-refresh-on
-    .job-list-pipeline
-    .build-details-pipeline-job-state-passed,
-  .build-page-refresh-on
-    .job-list-pipeline
-    .build-details-pipeline-job-state-passed
-    .build-details-pipeline-job-body,
-  .build-page-refresh-off
-    .job-list-pipeline
-    .build-details-pipeline-job-state-passed,
-  .build-page-refresh-off
-    .job-list-pipeline
-    .build-details-pipeline-job-state-passed
-    .build-details-pipeline-job-body {
-    border-color: var(--color-status-passed-border);
-  }
-
-  .build-page-refresh-on
-    .job-list-pipeline
-    .build-details-pipeline-job-state-failed,
-  .build-page-refresh-on
-    .job-list-pipeline
-    .build-details-pipeline-job-state-failed
-    .build-details-pipeline-job-body,
-  .build-page-refresh-off
-    .job-list-pipeline
-    .build-details-pipeline-job-state-failed,
-  .build-page-refresh-off
-    .job-list-pipeline
-    .build-details-pipeline-job-state-failed
-    .build-details-pipeline-job-body {
-    border-color: var(--color-status-failed-border);
-  }
-
-  .JobLogOutputComponent {
-    border: 1px solid var(--color-border-primary);
-    border-top-width: 0;
-  }
-
-  .JobLogOutputComponent__Controls {
-    border-top: 1px solid var(--color-border-primary);
-    box-shadow: none;
-  }
-
-  /* Because there isn't a non-generated class name for dropdowns, we use the generated one if it exists. */
-  .jbDAzK,
-  .Dropdown-showing > div,
-  .popup {
-    background-color: var(--color-bg-overlay);
-    border: none;
-    box-shadow: var(--color-shadow-large);
-    color: var(--color-text-primary);
-  }
-
-  .jbDAzK > img,
-  .Dropdown-showing > div > img,
-  .popup::before {
-    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00NzUgMjY2IDMyIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC00NzUgMjY2IDMyIDIwIj48ZGVmcz48ZmlsdGVyIGlkPSJhIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxIi8+PC9maWx0ZXI+PC9kZWZzPjxwYXRoIGZpbGw9IiM0ODRmNTgiIGQ9Ik0tNDY5IDI4NmwxMC0xMCAxMCAxMHoiLz48cGF0aCBmaWxsPSIjMjEyNjJkIiBkPSJNLTQ2OSAyODZsMTAtMTAgMTAgMTB6Ii8+PC9zdmc+");
-  }
-
-  /* Misc */
-  .badge {
-    background-color: var(--color-bg-secondary) !important;
-    border-color: var(--color-border-primary);
-    color: var(--color-text-tetiary);
-  }
-
-  .btn-tab--monochrome.btn-tab--active {
-    border-color: white !important;
-  }
-
-  /** Step editor */
-  .CodeMirror-gutters {
-    background-color: var(--color-bg-primary);
-    border-color: var(--color-border-secondary);
-  }
-
-  .CodeMirror-cursor {
-    border-color: var(--color-text-primary);
-  }
-
-  .CodeMirror-selected {
-    background-color: var(--color-code-selection-bg) !important;
-  }
-
-  /* Right arrow border in the header */
-  @media (min-width: 1200px) {
-    .btjemE {
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI5NSI+PHBhdGggZD0iTTEgMWwyMiA0Ni41TDEgOTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMwMzYzZCIvPjwvc3ZnPg==");
+        --base-0: hsl(0, 0%, 5%);
+        --base-1000: hsl(0, 0%, 95%);
+        --gray-100: hsl(0, 0%, 8%);
+        --gray-200: hsl(0, 0%, 9%);
+        --gray-300: hsl(0, 0%, 12%);
+        --gray-400: hsl(0, 0%, 15%);
+        --gray-500: hsl(0, 0%, 18%);
+        --gray-600: hsl(0, 0%, 32%);
+        --gray-700: hsl(0, 0%, 38%);
+        --gray-800: hsl(0, 0%, 49%);
+        --gray-900: hsl(0, 0%, 48%);
+        --charcoal-300: hsl(0, 0%, 54%);
+        --charcoal-400: hsl(0, 0%, 67%);
+        --charcoal-500: hsl(0, 0%, 70%);
+        --charcoal-600: hsl(0, 0%, 73%);
+        --charcoal-700: hsl(0, 0%, 80%);
+        --charcoal-800: hsl(0, 0%, 87%);
+        --charcoal-900: hsl(0, 0%, 93%);
+        --slate-100: hsl(210, 20%, 12%);
+        --slate-500: hsl(200, 11%, 26%);
+        --slate-800: hsl(220, 22%, 84%);
+        --slate-900: hsl(220, 22%, 89%);
+        --lime-200: #BEEAD8;
+        --lime-500: hsl(155, 82%, 23%);
+        --lime-700: #00BB64;
+        --olive-500: #3D9970;
+        --olive-700: #078573;
+        --olive-800: #0E7868;
+        --aqua-100: #DDFFFA;
+        --aqua-500: #6AF0DB;
+        --aqua-600: #39CCCC;
+        --aqua-800: #238072;
+        --green-100: hsl(120, 43%, 9%);
+        --green-400: #2ECC40;
+        --green-500: hsl(126, 100%, 25%);
+        --green-700: #00A110;
+        --red-100: hsl(0, 67%, 10%);
+        --red-500: hsl(8, 94%, 25%);
+        --red-600: hsl(1, 88%, 51%);
+        --red-700: hsl(8, 91%, 55%);
+        --orange-100: hsl(42, 100%, 10%);
+        --orange-500: hsl(43, 100%, 47%);
+        --orange-700: hsl(28, 100%, 45%);
+        --yellow-500: hsl(52, 100%, 50%);
+        --blue-100: #EFF9FF;
+        --blue-400: #7FDBFF;
+        --blue-600: #337AB7;
+        --blue-700: #0A568D;
+        --purple-100: hsl(248, 100%, 8%);
+        --purple-300: hsl(248, 74%, 29%);
+        --purple-600: hsl(256, 79%, 53%);
+        --purple-700: hsl(248, 60%, 68%);
+        --pink-100: #FFEDF9;
+        --pink-400: #F198D3;
+        --pink-700: #921F6B;
+        --pink-800: hsl(331, 74%, 30%)
     }
-  }
 
-  /* Help dialog border */
-  .dOxHiq {
-    background-color: var(--color-border-primary);
-  }
+    .badge--outline,
+    .btn-default,
+    a.btn-default,
+    .bg-white,
+    body,
+    .panel,
+    .panel-footer {
+        background-color: var(--base-0);
+        color: var(--base-1000);
+    }
 
-  /* Dialog */
-  .Dialog__Backdrop {
-    background-color: var(--color-bg-secondary);
-  }
+    .badge--outline {
+        border-color: var(--gray-500);
+    }
 
-  .Dialog__Box {
-    background-color: var(--color-bg-overlay);
-  }
+    .btn-default,
+    a.btn-default {
+        border-color: var(--gray-300);
+    }
 
-  .Dialog__CloseButton {
-    background-color: var(--color-bg-overlay);
-    color: var(--color-text-primary);
-  }
+    .btn-default:hover,
+    a.btn-default:hover {
+        color: var(--base-1000);
+        background-color: var(--gray-200);
+    }
 
-  /* Help support images */
-  .bpkWSX::after {
-    background: linear-gradient(
-      90deg,
-      rgba(33, 39, 45, 0) 0%,
-      rgba(33, 38, 45, 0.5) 42%,
-      rgba(33, 38, 45, 0.8) 100%
-    );
-  }
+    .better-branch-panel .panel-heading {
+        background-color: var(--gray-200);
+        border-color: var(--gray-300);
+        color: var(--base-1000)
+    }
 
-  .table,
-  .table th,
-  .table td {
-    border-color: var(--color-border-primary) !important;
-  }
+    .better-branch-panel .build-row:hover {
+        background-color: var(--gray-100);
+        color: var(--base-1000)
+    }
 
-  /** Annotation table */
-  .annotation-body table tr {
-    background-color: var(--color-bg-primary);
-  }
+    .focus-bg-silver:focus,
+    .hover-bg-silver:hover,
+    .bg-silver {
+        background-color: var(--gray-200)
+    }
 
-  .annotation-body table tr:nth-child(2n) {
-    background-color: var(--color-bg-secondary);
-  }
+    .border-gray,
+    .panel-default,
+    .build-row {
+        border-color: var(--gray-300);
+    }
 
-  .annotation-body table td,
-  .annotation-body table th {
-    border-color: var(--color-border-primary);
-  }
-
-  /** Retry groups */
-  .job-retry-group-first .build-details-pipeline-job__header {
-    box-shadow: none !important;
-  }
-
-  /* New pipeline */
-  .ProjectPipelineFormComponent__col--options,
-  .AgentQueryRulesResultComponent,
-  .AgentQueryRulesResultComponent--matched {
-    border-color: var(--color-border-primary);
-  }
-
-  .AgentQueryRulesComponent__AgentContainer,
-  .AgentQueryRulesComponent__AgentContainer__Info {
-    background-color: var(--color-bg-tertiary);
-    border-color: var(--color-border-primary);
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb {
-    border-color: #333;
-    background-color: #333;
-  }
-
-  /* Annotation panels */
-  .border-build-skipped {
-    border-color: rgb(var(--color-alert-info) / 60%);
-  }
-
-  .bg-build-skipped {
-    background-color: rgb(var(--color-alert-info) / 60%);
-  }
-
-  .hover-bg-build-skipped-dark:hover {
-    background-color: rgb(var(--color-alert-info) / 70%);
-  }
-
-  .border-build-passed_legacy {
-    border-color: rgb(var(--color-alert-success) / 60%);
-  }
-
-  .bg-build-passed_legacy {
-    background-color: rgb(var(--color-alert-success) / 60%);
-  }
-
-  .hover-bg-build-passed-dark:hover {
-    background-color: rgb(var(--color-alert-success) / 70%);
-  }
-
-  .border-build-running {
-    border-color: rgb(var(--color-alert-warn) / 60%);
-  }
-
-  .bg-build-running {
-    background-color: rgb(var(--color-alert-warn) / 60%);
-  }
-
-  .hover-bg-build-running-dark:hover {
-    background-color: rgb(var(--color-alert-warn) / 70%);
-  }
-
-  .border-build-failed {
-    border-color: rgb(var(--color-alert-error) / 60%);
-  }
-
-  .bg-build-failed {
-    background-color: rgb(var(--color-alert-error) / 60%);
-  }
-
-  .hover-bg-build-failed-dark:hover {
-    background-color: rgb(var(--color-alert-error) / 70%);
-  }
-
-  /** Pagination */
-  .pagination li a,
-  .pagination li.disabled a,
-  .pagination li a:hover,
-  .pagination li.disabled a:hover {
-    border-color: var(--color-border-primary);
-  }
-
-  .pagination li a {
-    background-color: var(--color-bg-primary);
-  }
-
-  .pagination li.disabled a {
-    background-color: var(--color-bg-secondary);
-  }
-
-  .pagination li a:hover,
-  .pagination li.disabled a:hover,
-  .pagination li a:focus {
-    background-color: var(--color-bg-tertiary);
-  }
-
-  .pagination li a:focus {
-    border-color: var(--color-state-focus-border);
-  }
-
-  .build-page-refresh-on .build-panel,
-  .build-page-refresh-on .build-duration,
-  .build-page-refresh-on .build-panel .panel-title,
-  .build-page-refresh-on .build-rebuild-button > span {
-    color: inherit;
-  }
-
-  .build-page-refresh-on
-    .build-pipeline-job.build-pipeline-state-failed
-    .build-pipeline-job-content:not(:first-child) {
-    background-color: inherit;
-  }
-  .build-page-refresh-on .build-header a:focus-visible,
-  .build-page-refresh-on .build-header button:focus-visible {
-    box-shadow: 0 0 0 2px var(--color-bg-primary),
-      0 0 0 4px var(--color-status-passed-text);
-  }
-
-  .build-page-refresh-on .build-annotation .annotation-link,
-  .build-page-refresh-on .build-panel .build-pipeline-job .tabular-numerals {
-    background: var(--color-bg-primary);
-  }
+    .black,
+    .hover-black:hover {
+        color: var(--base-1000);
+    }
 }
