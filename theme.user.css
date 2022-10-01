@@ -8,150 +8,184 @@
 @homepageURL    https://github.com/one-dark/buildkite-dark-theme
 ==/UserStyle== */
 @-moz-document regexp("https://buildkite\\.com/(?!docs).*") {
-    :root {
-        --color-text-primary: #c9d1d9;
-        --color-text-secondary: #8b949e;
-        --color-text-placeholder: #484f58;
-        --color-bg-primary: #06090f;
-        --color-bg-secondary: #0d1117;
-        --color-bg-tertiary: #161b22;
-        --color-bg-overlay: #21262d;
-        --color-border-primary: #30363d;
-        --color-border-secondary: #21262d;
-        --color-state-focus-border: #388bfd;
-        --color-state-focus-shadow: 0 0 0 3px #0c2d6b;
-        --color-select-menu-backdrop-border: #484f58;
-        --color-shadow-large: 0 8px 24px #010409;
-        --color-code-selection-bg: rgb(121 192 255 / 30%);
-        /* Annotation colors */
-        --color-alert-info: 56 139 253;
-        --color-alert-success: 46 160 67;
-        --color-alert-warn: 187 128 9;
-        --color-alert-error: 248 81 73;
-        /* Status colors */
-        --color-status-passed-bg: rgba(63, 185, 80, 0.1);
-        --color-status-passed-border: rgba(63, 185, 80, 0.4);
-        --color-status-passed-border-light: rgb(63 185 80 / 12%);
-        --color-status-passed-text: #3fb950;
-        --color-status-failed-bg: rgba(185, 63, 63, 0.1);
-        --color-status-failed-border: rgba(185, 63, 63, 0.4);
-        --color-status-failed-border-light: rgb(185 63 63 / 12%);
-        --color-status-failed-text: #ff6b61;
-        --color-status-warn-bg: rgba(255, 197, 0, 0.1);
-        --color-status-warn-border: rgb(242 211 91 / 40%);
-        --color-status-warn-border-light: rgb(242 211 91 / 12%);
-        --color-status-warn-text: #ffd33d;
+  :root {
+    --base-0: hsl(0, 0%, 5%);
+    --base-1000: hsl(0, 0%, 95%);
+    --gray-100: hsl(0, 0%, 8%);
+    --gray-200: hsl(0, 0%, 9%);
+    --gray-300: hsl(0, 0%, 12%);
+    --gray-400: hsl(0, 0%, 15%);
+    --gray-500: hsl(0, 0%, 18%);
+    --gray-600: hsl(0, 0%, 32%);
+    --gray-700: hsl(0, 0%, 38%);
+    --gray-800: hsl(0, 0%, 49%);
+    --gray-900: hsl(0, 0%, 48%);
+    --charcoal-300: hsl(0, 0%, 54%);
+    --charcoal-400: hsl(0, 0%, 67%);
+    --charcoal-500: hsl(0, 0%, 70%);
+    --charcoal-600: hsl(0, 0%, 73%);
+    --charcoal-700: hsl(0, 0%, 80%);
+    --charcoal-800: hsl(0, 0%, 87%);
+    --charcoal-900: hsl(0, 0%, 93%);
+    --slate-100: hsl(210, 20%, 12%);
+    --slate-500: hsl(200, 11%, 26%);
+    --slate-800: hsl(220, 22%, 84%);
+    --slate-900: hsl(220, 22%, 89%);
+
+    --lime-200: hsl(155, 51%, 17%);
+    --lime-500: hsl(155, 82%, 23%);
+    --lime-700: hsl(152, 100%, 63%);
+    --olive-500: hsl(153, 43%, 58%);
+    --olive-700: hsl(171, 90%, 73%);
+    --olive-800: hsl(171, 79%, 74%);
+    --aqua-100: #DDFFFA;
+    --aqua-500: #6AF0DB;
+    --aqua-600: #39CCCC;
+    --aqua-800: #238072;
+    --green-100: hsl(120, 43%, 9%);
+    --green-400: #2ECC40;
+    --green-500: hsl(126, 100%, 25%);
+    --green-700: #00A110;
+    --red-100: hsl(0, 67%, 10%);
+    --red-500: hsl(8, 94%, 25%);
+    --red-600: hsl(1, 88%, 51%);
+    --red-700: hsl(8, 91%, 55%);
+    --orange-100: hsl(42, 100%, 10%);
+    --orange-500: hsl(43, 100%, 47%);
+    --orange-700: hsl(28, 100%, 45%);
+    --yellow-500: hsl(52, 100%, 50%);
+    --blue-100: #EFF9FF;
+    --blue-400: #7FDBFF;
+    --blue-600: #337AB7;
+    --blue-700: #0A568D;
+    --purple-100: hsl(248, 100%, 8%);
+    --purple-300: hsl(248, 74%, 29%);
+    --purple-600: hsl(256, 79%, 53%);
+    --purple-700: hsl(248, 60%, 68%);
+    --pink-100: #FFEDF9;
+    --pink-400: #F198D3;
+    --pink-700: #921F6B;
+    --pink-800: hsl(331, 74%, 30%)
+  }
+
+  .badge--outline,
+  .btn-default,
+  a.btn-default,
+  .bg-white,
+  body,
+  .panel,
+  .panel-footer {
+    background-color: var(--base-0);
+    color: var(--base-1000);
+  }
+
+  .badge--outline {
+    border-color: var(--gray-500);
+  }
+
+  .btn-default,
+  a.btn-default {
+    border-color: var(--gray-300);
+  }
+
+  .btn-default:hover,
+  a.btn-default:hover {
+    color: var(--base-1000);
+    background-color: var(--gray-200);
+  }
+  
+  .btn-danger {
+    background-color: var(--base-0);
+    border-color: var(--gray-400);
+  }
+  
+  .code--boxed, code.code, pre.code {
+    border-color: var(--gray-400);
+  }
+
+  .better-branch-panel .panel-heading {
+    background-color: var(--gray-200);
+    border-color: var(--gray-300);
+    color: var(--base-1000)
+  }
+
+  .better-branch-panel .build-row:hover {
+    background-color: var(--gray-100);
+    color: var(--base-1000)
+  }
+
+  .focus-bg-silver:focus,
+  .hover-bg-silver:hover,
+  .bg-silver {
+    background-color: var(--gray-200)
+  }
+
+  .border-gray,
+  .panel-default,
+  .build-row {
+    border-color: var(--gray-400);
+  }
+
+  .black,
+  .hover-black:hover {
+    color: var(--base-1000);
+  }
+
+  .bg-gray {
+    background-color: var(--gray-400);
+  }
 
 
-        --base-0: hsl(0, 0%, 5%);
-        --base-1000: hsl(0, 0%, 95%);
-        --gray-100: hsl(0, 0%, 8%);
-        --gray-200: hsl(0, 0%, 9%);
-        --gray-300: hsl(0, 0%, 12%);
-        --gray-400: hsl(0, 0%, 15%);
-        --gray-500: hsl(0, 0%, 18%);
-        --gray-600: hsl(0, 0%, 32%);
-        --gray-700: hsl(0, 0%, 38%);
-        --gray-800: hsl(0, 0%, 49%);
-        --gray-900: hsl(0, 0%, 48%);
-        --charcoal-300: hsl(0, 0%, 54%);
-        --charcoal-400: hsl(0, 0%, 67%);
-        --charcoal-500: hsl(0, 0%, 70%);
-        --charcoal-600: hsl(0, 0%, 73%);
-        --charcoal-700: hsl(0, 0%, 80%);
-        --charcoal-800: hsl(0, 0%, 87%);
-        --charcoal-900: hsl(0, 0%, 93%);
-        --slate-100: hsl(210, 20%, 12%);
-        --slate-500: hsl(200, 11%, 26%);
-        --slate-800: hsl(220, 22%, 84%);
-        --slate-900: hsl(220, 22%, 89%);
-        --lime-200: #BEEAD8;
-        --lime-500: hsl(155, 82%, 23%);
-        --lime-700: #00BB64;
-        --olive-500: #3D9970;
-        --olive-700: #078573;
-        --olive-800: #0E7868;
-        --aqua-100: #DDFFFA;
-        --aqua-500: #6AF0DB;
-        --aqua-600: #39CCCC;
-        --aqua-800: #238072;
-        --green-100: hsl(120, 43%, 9%);
-        --green-400: #2ECC40;
-        --green-500: hsl(126, 100%, 25%);
-        --green-700: #00A110;
-        --red-100: hsl(0, 67%, 10%);
-        --red-500: hsl(8, 94%, 25%);
-        --red-600: hsl(1, 88%, 51%);
-        --red-700: hsl(8, 91%, 55%);
-        --orange-100: hsl(42, 100%, 10%);
-        --orange-500: hsl(43, 100%, 47%);
-        --orange-700: hsl(28, 100%, 45%);
-        --yellow-500: hsl(52, 100%, 50%);
-        --blue-100: #EFF9FF;
-        --blue-400: #7FDBFF;
-        --blue-600: #337AB7;
-        --blue-700: #0A568D;
-        --purple-100: hsl(248, 100%, 8%);
-        --purple-300: hsl(248, 74%, 29%);
-        --purple-600: hsl(256, 79%, 53%);
-        --purple-700: hsl(248, 60%, 68%);
-        --pink-100: #FFEDF9;
-        --pink-400: #F198D3;
-        --pink-700: #921F6B;
-        --pink-800: hsl(331, 74%, 30%)
+  .input.borderless,
+  .input.borderless:hover,
+  .input.borderless:focus {
+    background-color: var(--base-0);
+    border-color: var(--base-0);
+    color: var(--base-1000)
+  }
+
+  /* Because there isn't a non-generated class name for dropdowns, we use the generated one if it exists. */
+  .jbDAzK,
+  .Dropdown-showing > div,
+  .popup {
+    background-color: var(--gray-300);
+  }
+
+  .jbDAzK > img,
+  .Dropdown-showing > div > img,
+  .popup::before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00NzUgMjY2IDMyIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC00NzUgMjY2IDMyIDIwIj48ZGVmcz48ZmlsdGVyIGlkPSJhIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxIi8+PC9maWx0ZXI+PC9kZWZzPjxwYXRoIGZpbGw9IiMxZjFmMWYiIGQ9Ik0tNDY5IDI4NmwxMC0xMCAxMCAxMHoiLz48cGF0aCBmaWxsPSIjMWYxZjFmIiBkPSJNLTQ2OSAyODZsMTAtMTAgMTAgMTB6Ii8+PC9zdmc+");
+  }
+
+  .cIKpxU {
+    color: var(--charcoal-500);
+  }
+
+  .bpkWSX::after {
+    background: linear-gradient( 90deg,
+    rgba(31, 31, 31, 0) 0%,
+    rgba(31, 31, 31, 0.5) 42%,
+    rgba(31, 31, 31, 0.8) 100%);
+  }
+
+  .input,
+  .ais-SearchBox-input {
+    background-color: var(--gray-100);
+    border-color: var(--gray-500);
+  }
+
+  .border-bottom-child-gray > * {
+    border-color: var(--gray-300);
+  }
+  
+ /* Right arrow border in the header */
+  @media (min-width: 1200px) {
+    .btjemE {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI5NSI+PHBhdGggZD0iTTEgMWwyMiA0Ni41TDEgOTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI2MjYyNiIvPjwvc3ZnPg==");
     }
-
-    .badge--outline,
-    .btn-default,
-    a.btn-default,
-    .bg-white,
-    body,
-    .panel,
-    .panel-footer {
-        background-color: var(--base-0);
-        color: var(--base-1000);
-    }
-
-    .badge--outline {
-        border-color: var(--gray-500);
-    }
-
-    .btn-default,
-    a.btn-default {
-        border-color: var(--gray-300);
-    }
-
-    .btn-default:hover,
-    a.btn-default:hover {
-        color: var(--base-1000);
-        background-color: var(--gray-200);
-    }
-
-    .better-branch-panel .panel-heading {
-        background-color: var(--gray-200);
-        border-color: var(--gray-300);
-        color: var(--base-1000)
-    }
-
-    .better-branch-panel .build-row:hover {
-        background-color: var(--gray-100);
-        color: var(--base-1000)
-    }
-
-    .focus-bg-silver:focus,
-    .hover-bg-silver:hover,
-    .bg-silver {
-        background-color: var(--gray-200)
-    }
-
-    .border-gray,
-    .panel-default,
-    .build-row {
-        border-color: var(--gray-300);
-    }
-
-    .black,
-    .hover-black:hover {
-        color: var(--base-1000);
-    }
+  }
+  
+  .code--boxed, pre.code {
+    background-color: var(--gray-100);
+  }
 }
