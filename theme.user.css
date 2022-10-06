@@ -7,7 +7,8 @@
 @license        ISC
 @homepageURL    https://github.com/one-dark/buildkite-dark-theme
 ==/UserStyle== */
-@-moz-document regexp("https://buildkite\\.com/(?!docs).*") {
+@-moz-document regexp("https://buildkite\\.com/(?!docs).*")
+{
   :root {
     --base-0: hsl(0, 0%, 5%);
     --base-1000: hsl(0, 0%, 95%);
@@ -38,14 +39,14 @@
     --olive-500: hsl(153, 43%, 58%);
     --olive-700: hsl(171, 90%, 73%);
     --olive-800: hsl(171, 79%, 74%);
-    --aqua-100: #DDFFFA;
-    --aqua-500: #6AF0DB;
-    --aqua-600: #39CCCC;
+    --aqua-100: #ddfffa;
+    --aqua-500: #6af0db;
+    --aqua-600: #39cccc;
     --aqua-800: #238072;
     --green-100: hsl(120, 43%, 9%);
-    --green-400: #2ECC40;
+    --green-400: #2ecc40;
     --green-500: hsl(126, 100%, 25%);
-    --green-700: #00A110;
+    --green-700: #00a110;
     --red-100: hsl(0, 67%, 10%);
     --red-500: hsl(8, 94%, 25%);
     --red-600: hsl(1, 88%, 51%);
@@ -54,18 +55,18 @@
     --orange-500: hsl(43, 100%, 47%);
     --orange-700: hsl(28, 100%, 45%);
     --yellow-500: hsl(52, 100%, 50%);
-    --blue-100: #EFF9FF;
-    --blue-400: #7FDBFF;
-    --blue-600: #337AB7;
-    --blue-700: #0A568D;
+    --blue-100: #eff9ff;
+    --blue-400: #7fdbff;
+    --blue-600: #337ab7;
+    --blue-700: #0a568d;
     --purple-100: hsl(248, 100%, 8%);
     --purple-300: hsl(248, 74%, 29%);
     --purple-600: hsl(256, 79%, 53%);
     --purple-700: hsl(248, 60%, 68%);
-    --pink-100: #FFEDF9;
-    --pink-400: #F198D3;
-    --pink-700: #921F6B;
-    --pink-800: hsl(331, 74%, 30%)
+    --pink-100: #ffedf9;
+    --pink-400: #f198d3;
+    --pink-700: #921f6b;
+    --pink-800: hsl(331, 74%, 30%);
   }
 
   .badge--outline,
@@ -93,31 +94,33 @@
     color: var(--base-1000);
     background-color: var(--gray-200);
   }
-  
+
   .btn-danger {
     background-color: var(--base-0);
     border-color: var(--gray-400);
   }
-  
-  .code--boxed, code.code, pre.code {
+
+  .code--boxed,
+  code.code,
+  pre.code {
     border-color: var(--gray-400);
   }
 
   .better-branch-panel .panel-heading {
     background-color: var(--gray-200);
     border-color: var(--gray-300);
-    color: var(--base-1000)
+    color: var(--base-1000);
   }
 
   .better-branch-panel .build-row:hover {
     background-color: var(--gray-100);
-    color: var(--base-1000)
+    color: var(--base-1000);
   }
 
   .focus-bg-silver:focus,
   .hover-bg-silver:hover,
   .bg-silver {
-    background-color: var(--gray-200)
+    background-color: var(--gray-200);
   }
 
   .border-gray,
@@ -135,13 +138,12 @@
     background-color: var(--gray-400);
   }
 
-
   .input.borderless,
   .input.borderless:hover,
   .input.borderless:focus {
     background-color: var(--base-0);
     border-color: var(--base-0);
-    color: var(--base-1000)
+    color: var(--base-1000);
   }
 
   /* Because there isn't a non-generated class name for dropdowns, we use the generated one if it exists. */
@@ -162,10 +164,12 @@
   }
 
   .bpkWSX::after {
-    background: linear-gradient( 90deg,
-    rgba(31, 31, 31, 0) 0%,
-    rgba(31, 31, 31, 0.5) 42%,
-    rgba(31, 31, 31, 0.8) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(31, 31, 31, 0) 0%,
+      rgba(31, 31, 31, 0.5) 42%,
+      rgba(31, 31, 31, 0.8) 100%
+    );
   }
 
   .input,
@@ -177,15 +181,16 @@
   .border-bottom-child-gray > * {
     border-color: var(--gray-300);
   }
-  
- /* Right arrow border in the header */
+
+  /* Right arrow border in the header */
   @media (min-width: 1200px) {
     .btjemE {
       background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI5NSI+PHBhdGggZD0iTTEgMWwyMiA0Ni41TDEgOTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzI2MjYyNiIvPjwvc3ZnPg==");
     }
   }
-  
-  .code--boxed, pre.code {
+
+  .code--boxed,
+  pre.code {
     background-color: var(--gray-100);
   }
 }
