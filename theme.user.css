@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Buildkite Dark Theme
 @namespace      github.com/one-dark
-@version        3.0.0
+@version        3.0.1
 @description    Relief the stress on your eyes when using Buildkite with this custom dark theme! This theme is inspired by the GitHub dark theme that was recently released.
 @author         Mark Skelton
 @license        ISC
@@ -32,7 +32,6 @@
     --slate-500: hsl(200, 11%, 26%);
     --slate-800: hsl(220, 22%, 84%);
     --slate-900: hsl(220, 22%, 89%);
-
     --lime-200: hsl(155, 51%, 17%);
     --lime-500: hsl(155, 82%, 23%);
     --lime-700: hsl(152, 100%, 63%);
@@ -192,5 +191,52 @@
   .code--boxed,
   pre.code {
     background-color: var(--gray-100);
+  }
+
+  .Dialog__Backdrop {
+    background: var(--base-0);
+  }
+
+  .Dialog__CloseButton {
+    border-color: var(--gray-300);
+    color: var(--base-1000);
+  }
+
+  .Dialog__CloseButton,
+  .Dialog__Box {
+    background: var(--gray-300);
+  }
+
+  .input {
+    color: var(--base-1000);
+  }
+
+  .dark-gray {
+    color: var(--charcoal-300);
+  }
+
+  .border-white {
+    border-color: var(--base-0);
+  }
+
+  .form-control,
+  .kinda-new-panel.panel-default .panel-heading {
+    background-color: var(--gray-200);
+    border-color: var(--gray-300);
+    color: var(--base-1000);
+  }
+
+  .panel > .panel-body + .table,
+  .panel > .panel-body + .table-responsive,
+  .panel > .table + .panel-body,
+  .panel > .table-responsive + .panel-body,
+  .table > thead > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  .table > tfoot > tr > td,
+  .panel-footer {
+    border-color: var(--gray-300);
   }
 }
