@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Buildkite Dark Theme
 @namespace      github.com/one-dark
-@version        3.0.2
+@version        3.0.3
 @description    Relief the stress on your eyes when using Buildkite with this custom dark theme! This theme is inspired by the GitHub dark theme that was recently released.
 @author         Mark Skelton
 @license        ISC
@@ -155,12 +155,14 @@
 
   /* Because there isn't a non-generated class name for dropdowns, we use the generated one if it exists. */
   .jbDAzK,
+  .cIKpxU,
   .Dropdown-showing > div,
   .popup {
     background-color: var(--gray-300);
   }
 
   .jbDAzK > img,
+  .cIKpxU > img,
   .Dropdown-showing > div > img,
   .popup::before {
     content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00NzUgMjY2IDMyIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC00NzUgMjY2IDMyIDIwIj48ZGVmcz48ZmlsdGVyIGlkPSJhIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxIi8+PC9maWx0ZXI+PC9kZWZzPjxwYXRoIGZpbGw9IiMxZjFmMWYiIGQ9Ik0tNDY5IDI4NmwxMC0xMCAxMCAxMHoiLz48cGF0aCBmaWxsPSIjMWYxZjFmIiBkPSJNLTQ2OSAyODZsMTAtMTAgMTAgMTB6Ii8+PC9zdmc+");
