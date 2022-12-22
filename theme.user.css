@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Buildkite Dark Theme
 @namespace      github.com/one-dark
-@version        3.0.3
+@version        3.0.4
 @description    Relief the stress on your eyes when using Buildkite with this custom dark theme! This theme is inspired by the GitHub dark theme that was recently released.
 @author         Mark Skelton
 @license        ISC
@@ -254,5 +254,20 @@
     background-color: var(--lime-200) !important;
     border-color: var(--lime-500) !important;
     box-shadow: none !important;
+  }
+
+  .annotation-body table th,
+  .annotation-body table td {
+    border-color: var(--gray-400);
+  }
+
+  .annotation-body table tr {
+    background-color: var(--base-0);
+    border-color: var(--gray-400);
+  }
+
+  .annotation-body table thead tr,
+  .annotation-body table tr:nth-child(2n) {
+    background-color: var(--gray-200);
   }
 }
