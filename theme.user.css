@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Buildkite Dark Theme
 @namespace      github.com/one-dark
-@version        3.0.6
+@version        3.0.7
 @description    Relief the stress on your eyes when using Buildkite with this custom dark theme! This theme is inspired by the GitHub dark theme that was recently released.
 @author         Mark Skelton
 @license        ISC
@@ -9,7 +9,7 @@
 ==/UserStyle== */
 @-moz-document regexp("https://buildkite\\.com/(?!docs).*") {
   :root {
-    --base-0: hsl(0, 0%, 5%);
+    --base-0: #0d1117;
     --base-1000: hsl(0, 0%, 95%);
     --gray-100: hsl(0, 0%, 8%);
     --gray-200: hsl(0, 0%, 9%);
